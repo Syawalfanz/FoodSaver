@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>FoodSaver — Reduce Waste, Save More</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">🌿 FoodSaver</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="how.html">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html" class="btn btn-outline">Login</a></li>
+      <li><a href="register.html" class="btn btn-primary">Join Free</a></li>
+      <li><a href="cart.html" class="btn btn-ghost nav-cart">🛒 <span class="cart-badge" style="display:none;">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="eyebrow">SDG9 · Sustainable Innovation</div>
+      <h1>Good Food<br><span class="accent">Shouldn't Go</span><br>to Waste.</h1>
+      <p class="hero-sub">FoodSaver connects Malaysians with surplus meals from restaurants, cafes, and home cooks — at up to 70% off, before it's too late.</p>
+      <div class="hero-cta">
+        <a href="browse.html" class="btn btn-primary btn-lg">Find Food Near Me</a>
+        <a href="register.html?role=seller" class="btn btn-ghost btn-lg">List Your Surplus →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>17,000+</strong><span>Tonnes wasted daily in Malaysia</span></div>
+        <div class="stat"><strong>70%</strong><span>Average savings per meal</span></div>
+        <div class="stat"><strong>SDG9</strong><span>Industry &amp; Innovation</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="food-card-float card-1"><div class="fc-img">🍱</div><div class="fc-info"><strong>Nasi Lemak Set</strong><span>Restoran Mak Cik · 0.4km</span></div><div class="fc-price"><del>RM8</del><strong>RM3</strong></div></div>
+      <div class="food-card-float card-2"><div class="fc-img">🥐</div><div class="fc-info"><strong>Croissant Bundle</strong><span>Sunrise Bakery · 1.1km</span></div><div class="fc-price"><del>RM15</del><strong>RM6</strong></div></div>
+      <div class="food-card-float card-3"><div class="fc-img">🍜</div><div class="fc-info"><strong>Char Kuey Teow</strong><span>Uncle Lim's · 0.8km</span></div><div class="fc-price"><del>RM10</del><strong>RM4</strong></div></div>
+      <div class="sdg-badge">SDG 9 ✓</div>
+    </div>
+  </div>
+  <div class="hero-wave"><svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg"><path d="M0 40 C360 80 1080 0 1440 40 L1440 80 L0 80 Z" fill="#f8f9f5"/></svg></div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-teaser section-pad bg-light">
+  <div class="container">
+    <div class="section-header"><div class="eyebrow">Simple process</div><h2>Zero Food Waste in <span class="accent">3 Steps</span></h2></div>
+    <div class="steps-grid">
+      <div class="step-card"><div class="step-icon">🔍</div><h3>Discover</h3><p>Search surplus food near you. Filter by cuisine, price, and pickup time.</p></div>
+      <div class="step-card"><div class="step-icon">🛒</div><h3>Reserve</h3><p>Add to cart and checkout securely. Payment is encrypted via Stripe sandbox.</p></div>
+      <div class="step-card"><div class="step-icon">🌱</div><h3>Collect &amp; Earn</h3><p>Pick up your food, save money, and earn GreenPoints for every purchase.</p></div>
+    </div>
+    <div class="text-center mt-40"><a href="how.html" class="btn btn-outline">Learn More →</a></div>
+  </div>
+</section>
+
+<!-- FEATURED LISTINGS (rendered by JS) -->
+<section class="featured section-pad">
+  <div class="container">
+    <div class="section-header"><div class="eyebrow">Available now</div><h2>Today's <span class="accent">Surplus Picks</span></h2></div>
+    <div class="listings-grid" id="featured-grid"></div>
+    <div class="text-center mt-40"><a href="browse.html" class="btn btn-outline">View All Listings →</a></div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section class="impact section-pad bg-green">
+  <div class="container">
+    <div class="section-header light"><div class="eyebrow">Our Impact</div><h2>Every Meal Saved Counts</h2></div>
+    <div class="impact-grid">
+      <div class="impact-item"><span class="impact-num" data-count="4820" data-suffix="">0</span><span class="impact-label">Meals Saved</span></div>
+      <div class="impact-item"><span class="impact-num" data-count="1240" data-suffix="kg">0</span><span class="impact-label">Food from Landfill</span></div>
+      <div class="impact-item"><span class="impact-num" data-count="380" data-suffix="">0</span><span class="impact-label">Partner Sellers</span></div>
+      <div class="impact-item"><span class="impact-num" data-count="62000" data-prefix="RM" data-suffix="">0</span><span class="impact-label">Saved by Buyers</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SELLER CTA -->
+<section class="section-pad">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-text">
+        <div class="eyebrow">For Businesses</div>
+        <h2>Turn Surplus Into <span class="accent">Revenue</span></h2>
+        <p>Join 380+ Malaysian restaurants, cafes, and home cooks already reducing waste and earning more with FoodSaver. Listing is free.</p>
+        <a href="register.html?role=seller" class="btn btn-primary btn-lg">Start Selling Today</a>
+      </div>
+      <div class="cta-visual">
+        <div class="seller-perks">
+          <div class="perk">✓ Free to list</div>
+          <div class="perk">✓ Real-time order alerts</div>
+          <div class="perk">✓ Stripe payouts</div>
+          <div class="perk">✓ Seller dashboard</div>
+          <div class="perk">✓ 10% commission only on sales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><div class="logo">🌿 FoodSaver</div><p>Reducing food waste through digital innovation. Aligned with SDG9.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Platform</h5><a href="browse.html">Browse Food</a><a href="how.html">How It Works</a></div>
+      <div class="footer-col"><h5>Account</h5><a href="login.html">Login</a><a href="register.html">Register</a><a href="dashboard.html">Dashboard</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2026 FoodSaver · BIC31502 Creativity &amp; Innovation · UTHM</p></div></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body></html>

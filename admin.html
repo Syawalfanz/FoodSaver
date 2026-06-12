@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Admin Panel — FoodSaver</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="container nav-inner"><a href="index.html" class="logo">🌿 FoodSaver</a><span style="font-size:12px;font-family:var(--font-display);color:var(--text-muted);margin-left:8px;">Admin Panel</span><a href="index.html" class="btn btn-outline" style="margin-left:auto;font-size:13px;">← Exit Admin</a></div></nav>
+
+<div id="admin-area" style="padding-top:var(--nav-h);background:var(--cream);min-height:100vh;">
+<div class="container">
+<div class="dashboard-layout">
+  <aside class="sidebar-nav">
+    <div style="padding:20px 0 16px;"><div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--green-dark);">Admin Panel</div><div style="font-size:11px;color:var(--text-muted);">Platform Management</div></div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="#" data-tab="overview">📊 Overview</a></li>
+      <li><a href="#" data-tab="listings">🍱 Listings</a></li>
+      <li><a href="#" data-tab="orders-admin">📦 Orders</a></li>
+    </ul>
+  </aside>
+
+  <div style="padding-top:20px;">
+
+    <div class="dash-tab" id="tab-overview">
+      <div class="stats-row">
+        <div class="stat-chip"><span class="num" data-count="1248">0</span><span class="lbl">Total Users</span></div>
+        <div class="stat-chip"><span class="num" data-count="380">0</span><span class="lbl">Sellers</span></div>
+        <div class="stat-chip"><span class="num" data-count="4820">0</span><span class="lbl">Orders</span></div>
+        <div class="stat-chip"><span class="num" data-prefix="RM" data-count="2400">0</span><span class="lbl">Revenue</span></div>
+      </div>
+    </div>
+
+    <div class="dash-tab" id="tab-listings" style="display:none;">
+      <div class="dash-card">
+        <h3>All Listings</h3>
+        <table class="orders-table">
+          <thead><tr><th>Item</th><th>Seller</th><th>Price</th><th>Stock</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="admin-listings-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="dash-tab" id="tab-orders-admin" style="display:none;">
+      <div class="dash-card">
+        <h3>Recent Orders</h3>
+        <table class="orders-table">
+          <thead><tr><th>Order #</th><th>Buyer</th><th>Item</th><th>Total</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>FS001</td><td>Ahmad Ali</td><td>🍱 Nasi Lemak</td><td>RM4.50</td><td><span class="status-badge completed">Completed</span></td></tr>
+            <tr><td>FS002</td><td>Nurul Ain</td><td>🥐 Croissant</td><td>RM7.50</td><td><span class="status-badge completed">Completed</span></td></tr>
+            <tr><td>FS003</td><td>Wei Han</td><td>🍜 CKT</td><td>RM5.50</td><td><span class="status-badge pending">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body></html>

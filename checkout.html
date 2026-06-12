@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Checkout — FoodSaver</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar" id="navbar"><div class="container nav-inner"><a href="index.html" class="logo">🌿 FoodSaver</a><a href="cart.html" class="btn btn-outline" style="margin-left:auto;">← Back to Cart</a></div></nav>
+
+<div class="page-hero"><div class="container"><div class="eyebrow" style="color:var(--lime);">Secure Checkout</div><h1>Complete Your Order</h1></div></div>
+
+<div style="background:var(--cream);padding:60px 0 80px;">
+<div class="container">
+<div style="display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start;">
+
+  <div>
+    <div class="dash-card">
+      <h3>Your Details</h3>
+      <form id="checkout-form">
+        <div class="form-group"><label>Full Name *</label><input type="text" required placeholder="Ahmad bin Ali"></div>
+        <div class="form-group"><label>Phone Number *</label><input type="tel" required placeholder="+60 12-345 6789"></div>
+        <div class="form-group"><label>Pickup Location</label><input type="text" value="See each seller's address" readonly style="background:#f0f0f0;"></div>
+        <div class="form-group"><label>Special Instructions</label><textarea placeholder="Any notes for the seller..."></textarea></div>
+
+        <h3 style="margin:24px 0 12px;font-family:var(--font-display);font-size:17px;color:var(--green-dark);">Payment — Stripe Sandbox</h3>
+        <div class="alert alert-warn">⚠️ Test mode — use card <strong>4242 4242 4242 4242</strong>, any future expiry, any 3-digit CVV.</div>
+        <div class="form-group"><label>Card Number *</label><input type="text" id="card-number" required placeholder="4242 4242 4242 4242" maxlength="19" autocomplete="cc-number"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="form-group"><label>Expiry (MM/YY) *</label><input type="text" id="card-expiry" required placeholder="08/27" maxlength="5"></div>
+          <div class="form-group"><label>CVV *</label><input type="text" id="card-cvv" required placeholder="123" maxlength="3"></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" id="co-pay-btn" style="width:100%;justify-content:center;">🔒 Pay Now</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="order-summary" style="position:sticky;top:calc(var(--nav-h) + 20px);">
+    <h3>Order Summary</h3>
+    <div id="checkout-items"></div>
+    <div class="summary-row" style="margin-top:16px;"><span>Subtotal</span><span id="co-subtotal">RM0.00</span></div>
+    <div class="summary-row"><span>Platform fee</span><span id="co-fee">RM1.50</span></div>
+    <div class="summary-row total"><span>Total</span><span id="co-grand">RM0.00</span></div>
+    <div style="margin-top:16px;padding:12px;background:#edfaf0;border-radius:var(--radius-sm);font-size:12px;color:var(--green-mid);text-align:center;">🌿 This order saves food from landfill</div>
+  </div>
+
+</div>
+</div>
+</div>
+<script src="js/main.js"></script>
+</body></html>

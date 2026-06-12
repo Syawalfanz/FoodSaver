@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard — FoodSaver</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">🌿 FoodSaver</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="cart.html" class="btn btn-ghost nav-cart">🛒 <span class="cart-badge" style="display:none;">0</span></a></li>
+      <li><a href="login.html" class="btn btn-outline">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="dashboard-area" style="padding-top:var(--nav-h);background:var(--cream);min-height:100vh;">
+<div class="container">
+<div class="dashboard-layout">
+
+  <aside class="sidebar-nav">
+    <div style="padding:20px 0 16px;">
+      <div style="font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--green-dark);">Hi, Ahmad 👋</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">Buyer · Member since Jun 2026</div>
+    </div>
+    <ul class="sidebar-menu">
+      <li class="active"><a href="#" data-tab="overview">📊 Overview</a></li>
+      <li><a href="#" data-tab="orders">🛒 My Orders</a></li>
+      <li><a href="#" data-tab="points">🌿 GreenPoints</a></li>
+      <li><a href="#" data-tab="seller">🍽️ Seller Tools</a></li>
+      <li><a href="#" data-tab="settings">⚙️ Settings</a></li>
+      <li><a href="login.html">🚪 Logout</a></li>
+    </ul>
+  </aside>
+
+  <div style="padding-top:20px;">
+
+    <!-- OVERVIEW TAB -->
+    <div class="dash-tab" id="tab-overview">
+      <div class="dash-card" style="background:linear-gradient(135deg,var(--green-dark),var(--green-mid));color:white;border:none;margin-bottom:24px;">
+        <div style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:16px;">
+          <div>
+            <div class="eyebrow" style="color:var(--lime);">GreenPoints Balance</div>
+            <div class="points-big" data-count="245">0</div>
+            <div class="points-label">Lifetime: 510 pts earned</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);">Food Saved</div>
+            <div style="font-size:26px;font-family:var(--font-display);font-weight:700;color:var(--lime);" data-count="3.2" data-suffix="kg">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-chip"><span class="num" data-count="12">0</span><span class="lbl">Orders</span></div>
+        <div class="stat-chip"><span class="num" data-count="245">0</span><span class="lbl">GreenPoints</span></div>
+        <div class="stat-chip"><span class="num" data-prefix="RM" data-count="68">0</span><span class="lbl">Total Saved</span></div>
+        <div class="stat-chip"><span class="num" data-count="5">0</span><span class="lbl">Sellers Supported</span></div>
+      </div>
+      <div class="dash-card">
+        <h3>Recent Orders</h3>
+        <table class="orders-table">
+          <thead><tr><th>Item</th><th>Seller</th><th>Date</th><th>Price</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>🍱 Nasi Lemak Set</td><td>Mak Cik</td><td>12 Jun</td><td>RM3.00</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>🥐 Croissant Bundle</td><td>Sunrise Bakery</td><td>11 Jun</td><td>RM6.00</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>🍜 Char Kuey Teow</td><td>Uncle Lim's</td><td>10 Jun</td><td>RM4.00</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>🍰 Cake Box</td><td>Sweetly Café</td><td>9 Jun</td><td>RM9.00</td><td><span class="status-badge pending">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ORDERS TAB -->
+    <div class="dash-tab" id="tab-orders" style="display:none;">
+      <div class="dash-card">
+        <h3>All Orders</h3>
+        <table class="orders-table">
+          <thead><tr><th>Order #</th><th>Item</th><th>Date</th><th>Total</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>FS001</td><td>🍱 Nasi Lemak Set</td><td>12 Jun 2026</td><td>RM4.50</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>FS002</td><td>🥐 Croissant Bundle</td><td>11 Jun 2026</td><td>RM7.50</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>FS003</td><td>🍜 Char Kuey Teow</td><td>10 Jun 2026</td><td>RM5.50</td><td><span class="status-badge completed">Collected</span></td></tr>
+            <tr><td>FS004</td><td>🍰 Cake Box</td><td>9 Jun 2026</td><td>RM10.50</td><td><span class="status-badge pending">Pending Pickup</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- GREENPOINTS TAB -->
+    <div class="dash-tab" id="tab-points" style="display:none;">
+      <div class="dash-card">
+        <h3>🌿 GreenPoints Balance: <span style="color:var(--green-accent);">245 pts</span></h3>
+        <p style="color:var(--text-muted);font-size:14px;margin-bottom:24px;">Earn points every time you save food from waste. Redeem for rewards below.</p>
+        <div class="rewards-grid">
+          <div class="reward-item"><div class="reward-icon">☕</div><h5>Free Coffee</h5><p>Redeem at partner cafes</p><div class="reward-pts">100 pts</div><button class="btn btn-sm btn-outline" style="margin-top:10px;width:100%;justify-content:center;" onclick="showToast('☕ Coffee voucher redeemed!')">Redeem</button></div>
+          <div class="reward-item"><div class="reward-icon">🎟️</div><h5>RM5 Voucher</h5><p>Off your next purchase</p><div class="reward-pts">200 pts</div><button class="btn btn-sm btn-primary" style="margin-top:10px;width:100%;justify-content:center;" onclick="showToast('🎟️ RM5 voucher redeemed!')">Redeem</button></div>
+          <div class="reward-item"><div class="reward-icon">🌳</div><h5>Plant a Tree</h5><p>We donate on your behalf</p><div class="reward-pts">300 pts</div><button class="btn btn-sm btn-outline" style="margin-top:10px;width:100%;justify-content:center;" onclick="showToast('🌳 Tree planted on your behalf!','warn')">Redeem</button></div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <h3>Points History</h3>
+        <table class="orders-table">
+          <thead><tr><th>Date</th><th>Activity</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr><td>12 Jun</td><td>Purchased Nasi Lemak Set</td><td style="color:var(--green-accent);">+15 pts</td></tr>
+            <tr><td>11 Jun</td><td>Purchased Croissant Bundle</td><td style="color:var(--green-accent);">+20 pts</td></tr>
+            <tr><td>10 Jun</td><td>Purchased Char Kuey Teow</td><td style="color:var(--green-accent);">+12 pts</td></tr>
+            <tr><td>5 Jun</td><td>Redeemed RM5 Voucher</td><td style="color:var(--danger);">−200 pts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SELLER TOOLS TAB -->
+    <div class="dash-tab" id="tab-seller" style="display:none;">
+      <div class="dash-card">
+        <h3>➕ Create New Listing</h3>
+        <form id="new-listing-form">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group"><label>Item Name *</label><input type="text" id="sl-name" required placeholder="e.g. Nasi Goreng Set"></div>
+            <div class="form-group"><label>Emoji Icon</label><input type="text" id="sl-emoji" placeholder="🍱" maxlength="2"></div>
+            <div class="form-group"><label>Discounted Price (RM) *</label><input type="number" id="sl-price" required min="0.5" step="0.5" placeholder="3.00"></div>
+            <div class="form-group"><label>Original Price (RM)</label><input type="number" id="sl-original" min="1" step="0.5" placeholder="8.00"></div>
+            <div class="form-group"><label>Stock Available *</label><input type="number" id="sl-stock" required min="1" placeholder="5"></div>
+            <div class="form-group"><label>Pickup Hours</label><input type="text" placeholder="e.g. 2PM – 5PM"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:8px;">+ Publish Listing</button>
+        </form>
+      </div>
+      <div class="dash-card">
+        <h3>My Listings</h3>
+        <table class="orders-table">
+          <thead><tr><th>Item</th><th>Price</th><th>Stock</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody id="my-listings-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div class="dash-tab" id="tab-settings" style="display:none;">
+      <div class="dash-card">
+        <h3>Account Settings</h3>
+        <div class="form-group"><label>Full Name</label><input type="text" value="Ahmad bin Ali"></div>
+        <div class="form-group"><label>Email</label><input type="email" value="ahmad@email.com"></div>
+        <div class="form-group"><label>Phone</label><input type="tel" value="+60 12-345 6789"></div>
+        <div class="form-group"><label>State</label><select><option selected>Johor</option><option>KL</option></select></div>
+        <button class="btn btn-primary" onclick="showToast('Settings saved!')">Save Changes</button>
+      </div>
+      <div class="dash-card">
+        <h3>Change Password</h3>
+        <div class="form-group"><label>Current Password</label><input type="password" placeholder="••••••••"></div>
+        <div class="form-group"><label>New Password</label><input type="password" placeholder="••••••••"></div>
+        <div class="form-group"><label>Confirm New Password</label><input type="password" placeholder="••••••••"></div>
+        <button class="btn btn-primary" onclick="showToast('Password updated!')">Update Password</button>
+      </div>
+    </div>
+
+  </div><!-- end main content -->
+</div><!-- end dashboard-layout -->
+</div><!-- end container -->
+</div><!-- end dashboard-area -->
+
+<script src="js/main.js"></script>
+</body></html>

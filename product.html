@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Product — FoodSaver</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">🌿 FoodSaver</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="how.html">How It Works</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html" class="btn btn-outline">Login</a></li>
+      <li><a href="cart.html" class="btn btn-ghost nav-cart">🛒 <span class="cart-badge" style="display:none;">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div style="padding-top:var(--nav-h);background:var(--cream);">
+  <div class="container" style="padding-top:20px;padding-bottom:8px;"><a href="browse.html" style="font-size:13px;color:var(--text-muted);">← Back to Browse</a></div>
+</div>
+
+<div id="product-area" style="background:var(--cream);padding-bottom:80px;">
+  <div class="container">
+    <div class="product-layout">
+      <!-- IMAGE -->
+      <div>
+        <div class="product-img-box"><span id="prod-emoji" style="font-size:100px;">🍱</span></div>
+      </div>
+      <!-- INFO -->
+      <div>
+        <div class="listing-badge" style="position:static;display:inline-block;margin-bottom:12px;">⏰ <span id="prod-ends">—</span></div>
+        <h1 class="product-title" id="prod-name">Loading...</h1>
+        <p class="product-seller" id="prod-seller"></p>
+        <div class="product-price">
+          <del id="prod-original"></del>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:4px;">
+            <span class="big-price" id="prod-price"></span>
+            <span class="save-badge" id="prod-discount"></span>
+          </div>
+        </div>
+        <div class="alert alert-warn">⚠️ Limited stock — <span id="prod-stock"></span>. Reserve now before it's gone!</div>
+        <p class="product-desc">Freshly prepared today with quality ingredients. Surplus from our kitchen — same great taste at a fraction of the price. Help reduce food waste while saving money!</p>
+        <div class="product-info">
+          <div class="info-item"><label>Seller Rating</label><span>⭐ 4.8 (128 reviews)</span></div>
+          <div class="info-item"><label>Pickup Window</label><span id="prod-pickup">Today</span></div>
+          <div class="info-item"><label>Stock</label><span id="prod-stock2"></span></div>
+          <div class="info-item"><label>GreenPoints</label><span id="prod-points"></span></div>
+        </div>
+        <div class="qty-select">
+          <button class="qty-btn" id="qty-down">−</button>
+          <span class="qty-num" id="qty-num">1</span>
+          <button class="qty-btn" id="qty-up">+</button>
+          <span style="font-size:13px;color:var(--text-muted);">portion(s)</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-primary btn-lg" id="btn-add-cart">🛒 Add to Cart</button>
+          <button class="btn btn-outline btn-lg" id="btn-buy-now">Buy Now →</button>
+        </div>
+        <div style="margin-top:20px;padding:14px 16px;background:#edfaf0;border-radius:var(--radius-sm);font-size:13px;color:var(--green-mid);">
+          🌿 Buying this item saves <strong>RM<span id="prod-saved"></span></strong> worth of food from landfill.
+        </div>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div style="margin-top:60px;">
+      <div class="section-header" style="text-align:left;margin-bottom:24px;"><div class="eyebrow">You might also like</div><h2>More <span class="accent">Surplus Picks</span></h2></div>
+      <div class="listings-grid" id="related-grid"></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><div class="logo">🌿 FoodSaver</div><p>Reducing food waste.</p></div>
+    <div class="footer-links">
+      <div class="footer-col"><h5>Platform</h5><a href="browse.html">Browse</a><a href="how.html">How It Works</a></div>
+      <div class="footer-col"><h5>Account</h5><a href="login.html">Login</a><a href="register.html">Register</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>© 2026 FoodSaver · BIC31502 · UTHM</p></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body></html>

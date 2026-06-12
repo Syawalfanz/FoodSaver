@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Contact — FoodSaver</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">🌿 FoodSaver</a>
+    <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="browse.html">Browse</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html" class="btn btn-outline">Login</a></li>
+      <li><a href="register.html" class="btn btn-primary">Join Free</a></li>
+      <li><a href="cart.html" class="btn btn-ghost nav-cart">🛒 <span class="cart-badge" style="display:none;">0</span></a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page-hero"><div class="container"><div class="eyebrow" style="color:var(--lime);">Get In Touch</div><h1>Contact Us</h1><p>Questions, partnerships, or feedback — we'd love to hear from you</p></div></div>
+
+<div class="form-page">
+<div class="container" style="max-width:900px;margin:0 auto;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+    <div style="padding-top:10px;">
+      <h3 style="font-family:var(--font-display);font-size:22px;color:var(--green-dark);margin-bottom:20px;">Let's talk</h3>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="display:flex;gap:14px;align-items:start;"><div style="font-size:24px;">📧</div><div><h5 style="font-family:var(--font-display);color:var(--green-dark);margin-bottom:4px;">Email</h5><p style="font-size:14px;color:var(--text-muted);">hello@foodsaver.my</p></div></div>
+        <div style="display:flex;gap:14px;align-items:start;"><div style="font-size:24px;">📍</div><div><h5 style="font-family:var(--font-display);color:var(--green-dark);margin-bottom:4px;">Address</h5><p style="font-size:14px;color:var(--text-muted);">Universiti Tun Hussein Onn Malaysia<br>86400 Batu Pahat, Johor</p></div></div>
+        <div style="display:flex;gap:14px;align-items:start;"><div style="font-size:24px;">🎓</div><div><h5 style="font-family:var(--font-display);color:var(--green-dark);margin-bottom:4px;">Academic Project</h5><p style="font-size:14px;color:var(--text-muted);">BIC31502 — Creativity &amp; Innovation<br>UTHM · Session 2025/2026</p></div></div>
+        <div style="display:flex;gap:14px;align-items:start;"><div style="font-size:24px;">⏰</div><div><h5 style="font-family:var(--font-display);color:var(--green-dark);margin-bottom:4px;">Response Time</h5><p style="font-size:14px;color:var(--text-muted);">We reply within 24 hours on weekdays</p></div></div>
+      </div>
+    </div>
+    <div class="form-card" style="max-width:100%;">
+      <form id="contact-form">
+        <div class="form-group"><label>Name *</label><input type="text" required placeholder="Your full name"></div>
+        <div class="form-group"><label>Email *</label><input type="email" required placeholder="you@email.com"></div>
+        <div class="form-group"><label>Subject</label>
+          <select>
+            <option value="">Select a subject...</option>
+            <option>General Enquiry</option><option>Partnership / Collaboration</option>
+            <option>Bug Report</option><option>Seller Application</option><option>Feedback</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Message *</label><textarea required placeholder="Tell us what's on your mind..." rows="5"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer"><div class="container footer-inner"><div class="footer-brand"><div class="logo">🌿 FoodSaver</div><p>Reducing food waste through digital innovation.</p></div><div class="footer-links"><div class="footer-col"><h5>Platform</h5><a href="browse.html">Browse</a><a href="how.html">How It Works</a></div><div class="footer-col"><h5>Account</h5><a href="login.html">Login</a></div><div class="footer-col"><h5>Company</h5><a href="about.html">About</a><a href="contact.html">Contact</a></div></div></div><div class="footer-bottom"><div class="container"><p>© 2026 FoodSaver · BIC31502 · UTHM</p></div></div></footer>
+<script src="js/main.js"></script>
+</body></html>
